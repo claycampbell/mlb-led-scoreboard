@@ -32,7 +32,7 @@ class ScoreboardConfig(private val context: Context) {
         get() = prefs.getBoolean("rotation_enabled", true)
 
     val rotationRate: Float
-        get() = prefs.getFloat("rotation_rate", 15f)
+        get() = prefs.getString("rotation_rate", "15")?.toFloatOrNull() ?: 15f
 
     val showStandings: Boolean
         get() = prefs.getBoolean("show_standings", true)
