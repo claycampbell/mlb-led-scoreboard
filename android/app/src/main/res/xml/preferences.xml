@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+        android:title="Favorite Teams"
+        android:key="cat_teams">
+
+        <EditTextPreference
+            android:key="preferred_teams"
+            android:title="Preferred Teams"
+            android:summary="Comma-separated team abbreviations (e.g., chc,nyy,lad)"
+            android:defaultValue=""
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Display"
+        android:key="cat_display">
+
+        <ListPreference
+            android:key="time_format"
+            android:title="Time Format"
+            android:entries="@array/time_format_entries"
+            android:entryValues="@array/time_format_values"
+            android:defaultValue="12h"
+            app:useSimpleSummaryProvider="true" />
+
+        <SwitchPreferenceCompat
+            android:key="show_standings"
+            android:title="Show Standings"
+            android:summary="Display standings during off-days"
+            android:defaultValue="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Game Rotation"
+        android:key="cat_rotation">
+
+        <SwitchPreferenceCompat
+            android:key="rotation_enabled"
+            android:title="Auto-Rotate Games"
+            android:summary="Automatically cycle through games"
+            android:defaultValue="true" />
+
+        <ListPreference
+            android:key="rotation_rate_str"
+            android:title="Rotation Speed"
+            android:entries="@array/rotation_rate_entries"
+            android:entryValues="@array/rotation_rate_values"
+            android:defaultValue="15"
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Kid-Friendly Options"
+        android:key="cat_kids">
+
+        <SwitchPreferenceCompat
+            android:key="show_emoji_celebrations"
+            android:title="Home Run Celebrations"
+            android:summary="Flash fun colors on home runs and big plays"
+            android:defaultValue="true" />
+
+        <SwitchPreferenceCompat
+            android:key="night_mode_auto"
+            android:title="Auto Night Mode"
+            android:summary="Dim display automatically after 8 PM"
+            android:defaultValue="false" />
+
+        <ListPreference
+            android:key="night_mode_brightness"
+            android:title="Night Brightness"
+            android:entries="@array/brightness_entries"
+            android:entryValues="@array/brightness_values"
+            android:defaultValue="30"
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

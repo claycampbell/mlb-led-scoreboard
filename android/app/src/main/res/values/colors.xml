@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="led_background">#FF070E19</color>
+    <color name="led_yellow">#FFFFEB3B</color>
+    <color name="led_red">#FFFF0000</color>
+    <color name="led_white">#FFFFFFFF</color>
+    <color name="led_green">#FF25661E</color>
+    <color name="standings_bg">#FF25661E</color>
+</resources>
