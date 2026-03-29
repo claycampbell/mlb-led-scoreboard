@@ -183,8 +183,8 @@ class ScoreboardActivity : AppCompatActivity() {
 
                 // Target ~30fps (33ms per frame)
                 val elapsed = System.currentTimeMillis() - frameStart
-                val delay = maxOf(16L, 33L - elapsed)
-                delay(delay)
+                val sleepMs = maxOf(16L, 33L - elapsed)
+                delay(sleepMs)
             }
         }
     }
