@@ -9,7 +9,7 @@ android {
 
     defaultConfig {
         applicationId = "com.mlb.scoreboard"
-        minSdk = 22 // Fire OS 5 (Android 5.1)
+        minSdk = 26 // Fire OS 6+ (Android 8.0+)
         targetSdk = 35
         versionCode = 1
         versionName = "1.0.0"
