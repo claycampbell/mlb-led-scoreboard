@@ -1,9 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Legacy LED colors -->
     <color name="led_background">#FF070E19</color>
     <color name="led_yellow">#FFFFEB3B</color>
     <color name="led_red">#FFFF0000</color>
     <color name="led_white">#FFFFFFFF</color>
     <color name="led_green">#FF25661E</color>
     <color name="standings_bg">#FF25661E</color>
+
+    <!-- Gameday Dark Theme -->
+    <color name="gameday_bg">#FF0A1628</color>
+    <color name="gameday_surface">#FF122240</color>
+    <color name="gameday_surface_light">#FF1A3058</color>
+    <color name="gameday_accent">#FF057AFF</color>
+    <color name="gameday_text_primary">#FFFFFFFF</color>
+    <color name="gameday_text_secondary">#FFB0BEC5</color>
+    <color name="gameday_text_dim">#FF607D8B</color>
+    <color name="gameday_score">#FFFFFFFF</color>
+    <color name="gameday_divider">#FF1E3A5F</color>
+
+    <!-- Strike Zone -->
+    <color name="sz_zone_border">#80FFFFFF</color>
+    <color name="sz_zone_fill">#10FFFFFF</color>
+    <color name="sz_ball">#FF4CAF50</color>
+    <color name="sz_strike">#FFE53935</color>
+    <color name="sz_in_play">#FF2196F3</color>
+    <color name="sz_foul">#FFFFAB00</color>
+
+    <!-- Pitch Type Colors -->
+    <color name="pitch_fastball">#FFEF5350</color>
+    <color name="pitch_slider">#FFFFCA28</color>
+    <color name="pitch_curveball">#FF66BB6A</color>
+    <color name="pitch_changeup">#FF42A5F5</color>
+    <color name="pitch_cutter">#FFFF7043</color>
+    <color name="pitch_sinker">#FFAB47BC</color>
+    <color name="pitch_sweeper">#FFEC407A</color>
+    <color name="pitch_other">#FF78909C</color>
+
+    <!-- Count Indicators -->
+    <color name="count_ball">#FF4CAF50</color>
+    <color name="count_strike">#FFE53935</color>
+    <color name="count_out">#FFFFAB00</color>
+    <color name="count_inactive">#40FFFFFF</color>
+
+    <!-- Base Diamond -->
+    <color name="base_empty">#40FFFFFF</color>
+    <color name="base_occupied">#FFFFCA28</color>
+
+    <!-- Play Feed -->
+    <color name="play_scoring">#33FFCA28</color>
+    <color name="play_home_run">#33FF5722</color>
 </resources>

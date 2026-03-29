@@ -47,7 +47,7 @@ class LedMatrixView @JvmOverloads constructor(
     private var ledCorner = 0f
 
     // Background color for the matrix (dark blue from original)
-    var backgroundColor = Color.rgb(7, 14, 25)
+    var matrixBackgroundColor = Color.rgb(7, 14, 25)
 
     // Tap listener for settings access
     var onDoubleTapListener: (() -> Unit)? = null
@@ -63,11 +63,11 @@ class LedMatrixView @JvmOverloads constructor(
 
     init {
         // Start with background color
-        clearBuffer(backgroundColor)
+        clearBuffer(matrixBackgroundColor)
         keepScreenOn = true
     }
 
-    fun clearBuffer(color: Int = backgroundColor) {
+    fun clearBuffer(color: Int = matrixBackgroundColor) {
         synchronized(backBuffer) {
             for (y in 0 until MATRIX_HEIGHT) {
                 for (x in 0 until MATRIX_WIDTH) {

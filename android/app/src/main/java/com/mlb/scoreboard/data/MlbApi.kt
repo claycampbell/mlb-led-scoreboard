@@ -18,7 +18,7 @@ interface MlbApi {
         @Query("hydrate") hydrate: String = "linescore,decisions,team,probablePitcher"
     ): ScheduleResponse
 
-    @GET("game/{gamePk}/feed/live")
+    @GET("../v1.1/game/{gamePk}/feed/live")
     suspend fun getLiveFeed(
         @Path("gamePk") gamePk: Int
     ): LiveFeedResponse

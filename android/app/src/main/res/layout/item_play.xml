@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingStart="8dp"
+    android:paddingEnd="8dp"
+    android:paddingTop="4dp"
+    android:paddingBottom="4dp"
+    android:gravity="center_vertical">
+
+    <TextView
+        android:id="@+id/playEvent"
+        android:layout_width="56dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/gameday_accent"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:gravity="end"
+        android:paddingEnd="8dp"
+        tools:text="HOME RUN" />
+
+    <TextView
+        android:id="@+id/playDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textColor="@color/gameday_text_secondary"
+        android:textSize="11sp"
+        android:maxLines="2"
+        android:ellipsize="end"
+        tools:text="Rodriguez homered to left center" />
+
+</LinearLayout>
