@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="Theme.MLBScoreboard" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <item name="colorPrimary">#002D62</item>
-        <item name="colorPrimaryDark">#001B3D</item>
-        <item name="colorAccent">#FFEB3B</item>
-        <item name="android:windowBackground">#FF070E19</item>
+        <item name="colorPrimary">@color/gameday_accent</item>
+        <item name="colorPrimaryDark">@color/gameday_bg</item>
+        <item name="colorAccent">@color/gameday_accent</item>
+        <item name="android:windowBackground">@color/gameday_bg</item>
     </style>
 
     <style name="Theme.MLBScoreboard.Fullscreen" parent="Theme.MLBScoreboard">

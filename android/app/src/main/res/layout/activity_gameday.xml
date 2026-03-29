@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/gameday_bg"
+    android:keepScreenOn="true">
+
+    <!-- Top Scoreboard Bar -->
+    <LinearLayout
+        android:id="@+id/scoreboardBar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2.2"
+        android:orientation="horizontal"
+        android:background="@color/gameday_surface"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
+        <!-- Away Team -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/awayTeamName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gameday_text_secondary"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                tools:text="SEA" />
+
+            <TextView
+                android:id="@+id/awayScore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gameday_score"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-condensed"
+                tools:text="4" />
+        </LinearLayout>
+
+        <!-- Inning / Status -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/inningLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gameday_text_secondary"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                tools:text="TOP" />
+
+            <TextView
+                android:id="@+id/inningNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gameday_accent"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                tools:text="5" />
+        </LinearLayout>
+
+        <!-- Home Team -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/homeTeamName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gameday_text_secondary"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                tools:text="HOU" />
+
+            <TextView
+                android:id="@+id/homeScore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gameday_score"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-condensed"
+                tools:text="2" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Thin divider -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/gameday_divider" />
+
+    <!-- Middle: Strike Zone + Game State -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:orientation="horizontal"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp">
+
+        <!-- Strike Zone View -->
+        <com.mlb.scoreboard.ui.views.StrikeZoneView
+            android:id="@+id/strikeZoneView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3" />
+
+        <!-- Right side: Diamond + Count + Matchup -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:paddingStart="4dp">
+
+            <!-- Base Diamond -->
+            <com.mlb.scoreboard.ui.views.BaseDiamondView
+                android:id="@+id/baseDiamondView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3" />
+
+            <!-- Count Indicator -->
+            <com.mlb.scoreboard.ui.views.CountIndicatorView
+                android:id="@+id/countIndicator"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2" />
+
+            <!-- Matchup Info -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:paddingTop="4dp">
+
+                <TextView
+                    android:id="@+id/batterLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/gameday_accent"
+                    android:textSize="9sp"
+                    android:textStyle="bold"
+                    android:text="@string/at_bat" />
+
+                <TextView
+                    android:id="@+id/batterName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/gameday_text_primary"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    tools:text="J. Rodriguez" />
+
+                <TextView
+                    android:id="@+id/pitcherLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/gameday_text_dim"
+                    android:textSize="9sp"
+                    android:textStyle="bold"
+                    android:text="@string/pitching"
+                    android:paddingTop="2dp" />
+
+                <TextView
+                    android:id="@+id/pitcherName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/gameday_text_secondary"
+                    android:textSize="12sp"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    tools:text="F. Valdez" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Thin divider -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gameday_divider" />
+
+    <!-- Bottom: Play-by-Play Feed -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2.8">
+
+        <TextView
+            android:id="@+id/playFeedLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/play_by_play"
+            android:textColor="@color/gameday_text_dim"
+            android:textSize="9sp"
+            android:textStyle="bold"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="4dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/playFeedRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="18dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:clipToPadding="false" />
+
+        <!-- Status overlay for pregame/final/no game -->
+        <TextView
+            android:id="@+id/statusOverlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textColor="@color/gameday_text_secondary"
+            android:textSize="16sp"
+            android:visibility="gone"
+            tools:text="Game starts at 7:10 PM" />
+    </FrameLayout>
+
+</LinearLayout>

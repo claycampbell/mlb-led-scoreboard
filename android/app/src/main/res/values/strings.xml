@@ -2,4 +2,17 @@
 <resources>
     <string name="app_name">MLB Scoreboard</string>
     <string name="settings_title">Settings</string>
+    <string name="no_game_today">No game scheduled today</string>
+    <string name="waiting_for_game">Game starts soon</string>
+    <string name="final_label">FINAL</string>
+    <string name="vs_label">vs</string>
+    <string name="at_bat">AT BAT</string>
+    <string name="pitching">PITCHING</string>
+    <string name="balls_label">B</string>
+    <string name="strikes_label">S</string>
+    <string name="outs_label">O</string>
+    <string name="mph_label">mph</string>
+    <string name="inning_top">TOP</string>
+    <string name="inning_bot">BOT</string>
+    <string name="play_by_play">PLAYS</string>
 </resources>

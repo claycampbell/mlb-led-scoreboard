@@ -193,7 +193,8 @@ data class LiveData(
 )
 
 data class Plays(
-    val currentPlay: CurrentPlay? = null
+    val currentPlay: CurrentPlay? = null,
+    val allPlays: List<CurrentPlay>? = null
 )
 
 data class CurrentPlay(
@@ -201,7 +202,8 @@ data class CurrentPlay(
     val about: PlayAbout? = null,
     val count: PlayCount? = null,
     val matchup: PlayMatchup? = null,
-    val runners: List<Runner>? = null
+    val runners: List<Runner>? = null,
+    val playEvents: List<PlayEvent>? = null
 )
 
 data class PlayResult(
@@ -226,7 +228,14 @@ data class PlayCount(
 
 data class PlayMatchup(
     val batter: PlayerInfo? = null,
-    val pitcher: PlayerInfo? = null
+    val pitcher: PlayerInfo? = null,
+    val batSide: HandSide? = null,
+    val pitchHand: HandSide? = null
+)
+
+data class HandSide(
+    val code: String? = null,
+    val description: String? = null
 )
 
 data class Runner(
@@ -266,4 +275,63 @@ data class TeamStanding(
     val divisionRank: String? = null,
     val clinched: Boolean = false,
     val eliminationNumber: String? = null
+)
+
+// ---- Pitch Event Data ----
+
+data class PlayEvent(
+    val details: PitchDetails? = null,
+    val count: PlayCount? = null,
+    val pitchData: PitchData? = null,
+    val index: Int = 0,
+    val pitchNumber: Int = 0,
+    val isPitch: Boolean = false,
+    val type: String? = null
+)
+
+data class PitchDetails(
+    val call: PitchCall? = null,
+    val description: String? = null,
+    val code: String? = null,
+    val ballColor: String? = null,
+    val trailColor: String? = null,
+    val isInPlay: Boolean = false,
+    val isStrike: Boolean = false,
+    val isBall: Boolean = false,
+    val type: PitchType? = null,
+    val isOut: Boolean = false
+)
+
+data class PitchCall(
+    val code: String? = null,
+    val description: String? = null
+)
+
+data class PitchType(
+    val code: String? = null,
+    val description: String? = null
+)
+
+data class PitchData(
+    val startSpeed: Double? = null,
+    val endSpeed: Double? = null,
+    val strikeZoneTop: Double? = null,
+    val strikeZoneBottom: Double? = null,
+    val coordinates: PitchCoordinates? = null,
+    val breaks: PitchBreaks? = null,
+    val zone: Int? = null
+)
+
+data class PitchCoordinates(
+    val pX: Double? = null,
+    val pZ: Double? = null,
+    val x: Double? = null,
+    val y: Double? = null
+)
+
+data class PitchBreaks(
+    val spinRate: Int? = null,
+    val spinDirection: Int? = null,
+    val breakVerticalInduced: Double? = null,
+    val breakHorizontal: Double? = null
 )
